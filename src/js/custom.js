@@ -1,1 +1,1 @@
-console.log('src/js/custom.js')
+console.log('src/js/custom.js');
