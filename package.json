@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development --open",
-    "deploy": "npm run build && gsutil -m rsync -d -r ./dist gs://tabak-house",
+    "deploy": "gsutil -m rsync -d -r ./dist gs://tabak-house",
     "start": "npm run dev",
     "lint-css": "stylelint ./src/scss",
     "lint-js": "eslint ./src",
