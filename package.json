@@ -1,18 +1,10 @@
 {
-  "name": "bootstrap-npm-starter",
-  "version": "1.4.0",
+  "name": "tabak-house",
+  "version": "1.0.0",
   "private": true,
-  "description": "Demo project for building a Bootstrap powered site via npm.",
-  "author": "mdo",
+  "description": "Tabak.house website.",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tabak-house-src"
-  },
-  "bugs": {
-    "url": "https://github.com/tabak-house-src/issues"
-  },
-  "homepage": "https://github.com/tabak-house-src#readme",
+  "homepage": "https://tabak.house",
   "scripts": {
     "build": "NODE_ENV=production webpack --mode production",
     "dev": "NODE_ENV=development webpack serve --mode development --open",
@@ -21,14 +13,6 @@
     "lint-js": "eslint ./src",
     "lint": "npm-run-all lint-css lint-js"
   },
-  "keywords": [
-    "bootstrap",
-    "sass",
-    "css",
-    "javascript",
-    "starter",
-    "template"
-  ],
   "dependencies": {
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.4.0",
