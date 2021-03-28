@@ -80,7 +80,23 @@ $enable-shadows: true;
 //
 // Custom styles
 //
+.navmenu__links, .navmenu__media{
+  list-style-type: none;
 
-body {
-  padding: 3rem 1.5rem;
+  li{
+    display:inline;
+    padding-left: 20px;
+  }
+}
+
+.navmenu__links{
+  a{
+    color: black;
+    font-weight: 700;
+    opacity: 0.7;
+  }
+}
+
+.active-menu{
+  opacity: 1 !important;
 }

@@ -6,8 +6,8 @@
   "license": "MIT",
   "homepage": "https://tabak.house",
   "scripts": {
-    "build": "NODE_ENV=production webpack --mode production",
-    "dev": "NODE_ENV=development webpack serve --mode development --open",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development --open",
     "start": "npm run dev",
     "lint-css": "stylelint ./src/scss",
     "lint-js": "eslint ./src",
