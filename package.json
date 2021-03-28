@@ -7,12 +7,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/twbs/bootstrap-npm-starter.git"
+    "url": "git+https://github.com/tabak-house-src"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap-npm-starter/issues"
+    "url": "https://github.com/tabak-house-src/issues"
   },
-  "homepage": "https://github.com/twbs/bootstrap-npm-starter#readme",
+  "homepage": "https://github.com/tabak-house-src#readme",
   "scripts": {
     "build": "npm run css",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
