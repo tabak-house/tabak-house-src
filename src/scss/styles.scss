@@ -9,7 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
 //
 // Bring in Bootstrap
 //
@@ -35,7 +34,11 @@
 // Toggle global options
 $enable-gradients: true;
 $enable-shadows: true;
-
+$spacer: 40px;
+/////colors////
+$black: #000;
+$white: #fff;
+$gray: #f1f1f1;
 // Customize some defaults
 //  $body-color: $purple;
 //  $body-bg: #f5f5f5;
@@ -76,27 +79,68 @@ $enable-shadows: true;
 //@import "bootstrap/scss/utilities";
 //// @import "bootstrap/scss/print";
 
-
 //
 // Custom styles
 //
-.navmenu__links, .navmenu__media{
+body{
+  background-color: $gray;
+}
+
+.wrapper{
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: $white;
+  @include media-breakpoint-down(md){
+    padding: 0 20px;
+  }
+}
+
+.mb{
+  margin-bottom: 20px;
+  @include media-breakpoint-down(md){
+    margin-bottom: 10px;
+  }
+}
+
+.menu-links,
+.menu-media {
   list-style-type: none;
 
-  li{
-    display:inline;
+  li {
+    display: inline;
     padding-left: 20px;
   }
 }
 
-.navmenu__links{
-  a{
-    color: black;
+.menu-links {
+  a {
     font-weight: 700;
-    opacity: 0.7;
+    color: $black;
+    text-decoration: none;
+    transition: .3s ease;
+
+    &:focus {
+      padding: 6px 0;
+      color: $white;
+      outline: 0;
+      box-shadow: inset 100px 0 0 0 $black;
+    }
+
+    &:hover {
+      padding: 6px 0;
+      border-top: 4px solid $black;
+      border-bottom: 4px solid $black;
+    }
   }
 }
 
-.active-menu{
-  opacity: 1 !important;
+.menu-active {
+  opacity: 1;
 }
+
+.menu-link{
+  opacity: .5;
+}
+
+
