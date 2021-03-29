@@ -55,9 +55,9 @@ jobs:
         run: npm run build
 
       - name: 'Deploy: Development'
-        if: ${{ github.ref == 'develop' }}
+        if: ${{ github.ref == 'refs/heads/develop' }}
         run: 'gsutil -m -h "Cache-Control: ${{ env.GCP_BUCKET_DEV_CACHE }}" rsync -d -r ./dist ${{ env.GCP_BUCKET_DEV }}'
 
       - name: 'Deploy: Production'
-        if: ${{ github.ref == 'master' }}
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: 'gsutil -m -h "Cache-Control: ${{ env.GCP_BUCKET_PROD_CACHE }}" rsync -d -r ./dist ${{ env.GCP_BUCKET_PROD }}'
