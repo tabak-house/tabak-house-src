@@ -8,6 +8,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development --open",
+    "deploy": "gsutil -m rsync -d -r ./dist gs://tabak-house",
     "start": "npm run dev",
     "lint-css": "stylelint ./src/scss",
     "lint-js": "eslint ./src",
@@ -17,7 +18,8 @@
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.4.0",
     "jquery": "^3.6.0",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "stylelint-config-standard": "^21.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",
