@@ -2,7 +2,7 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "indentation": 2,
-    "string-quotes": "single",
+    "string-quotes": "double",
     "no-duplicate-selectors": true,
     "color-hex-case": "lower",
     "selector-combinator-space-after": "always",
@@ -16,6 +16,7 @@
     "rule-empty-line-before": "always",
     "selector-no-vendor-prefix": true,
     "media-feature-name-no-vendor-prefix": true,
+    "no-descending-specificity": null,
     "at-rule-no-unknown": [
       true,
       {
