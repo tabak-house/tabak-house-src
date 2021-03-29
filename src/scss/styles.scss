@@ -82,7 +82,6 @@ $gray: #f1f1f1;
 //
 // Custom styles
 //
-<<<<<<< HEAD
 body{
   background-color: $gray;
 }
@@ -108,20 +107,12 @@ body{
 .menu-media {
   list-style-type: none;
 
-  li {
-=======
-.navmenu-links,
-.navmenu-media{
-  list-style-type: none;
-
   li{
->>>>>>> 99253b391ae77a9280a0c54592b199d88d5a2da7
     display: inline;
     padding-left: 20px;
   }
 }
 
-<<<<<<< HEAD
 .menu-links {
   a {
     font-weight: 700;
@@ -144,23 +135,17 @@ body{
   }
 }
 
-.menu-active {
-=======
 .navmenu-links{
   a{
     font-weight: 700;
     color: #000;
-    opacity: .7;
   }
 }
 
-.active-menu{
->>>>>>> 99253b391ae77a9280a0c54592b199d88d5a2da7
+.menu-active {
   opacity: 1;
 }
 
 .menu-link{
   opacity: .5;
 }
-
-
