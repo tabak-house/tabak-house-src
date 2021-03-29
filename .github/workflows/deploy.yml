@@ -9,11 +9,9 @@ on:
 env:
   # DEV environment settings.
   GCP_BUCKET_DEV: 'gs://tabak-house-development'
-  GCP_BUCKET_DEV_CACHE: 'public, max-age=60'
 
   # PRODUCTION environment settings.
   GCP_BUCKET_PROD: 'gs://tabak-house-production'
-  GCP_BUCKET_PROD_CACHE: 'public, max-age=3600'
 
 jobs:
   build-and-deploy:
@@ -56,8 +54,8 @@ jobs:
 
       - name: 'Deploy: develop'
         if: ${{ github.ref == 'refs/heads/develop' }}
-        run: 'gsutil -m -h "Cache-Control: ${{ env.GCP_BUCKET_DEV_CACHE }}" rsync -d -r ./dist ${{ env.GCP_BUCKET_DEV }}'
+        run: 'gsutil -m rsync -d -r ./dist ${{ env.GCP_BUCKET_DEV }}'
 
       - name: 'Deploy: master'
         if: ${{ github.ref == 'refs/heads/master' }}
-        run: 'gsutil -m -h "Cache-Control: ${{ env.GCP_BUCKET_PROD_CACHE }}" rsync -d -r ./dist ${{ env.GCP_BUCKET_PROD }}'
+        run: 'gsutil -m rsync -d -r ./dist ${{ env.GCP_BUCKET_PROD }}'
