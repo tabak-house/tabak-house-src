@@ -8,8 +8,6 @@
 // CSS without writing _new_ styles. For example, change you can either change
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
-
-
 //
 // Bring in Bootstrap
 //
@@ -76,28 +74,29 @@ $enable-shadows: true;
 //@import "bootstrap/scss/utilities";
 //// @import "bootstrap/scss/print";
 
-
 //
 // Custom styles
 //
+
 .navmenu-links,
-.navmenu-media{
+.navmenu-media {
   list-style-type: none;
 
-  li{
+  li {
     display: inline;
     padding-left: 20px;
   }
 }
 
-.navmenu-links{
-  a{
+.navmenu-links {
+
+  a {
     font-weight: 700;
     color: #000;
     opacity: .7;
   }
 }
 
-.active-menu{
+.active-menu {
   opacity: 1;
 }
