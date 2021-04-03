@@ -100,3 +100,10 @@ $enable-shadows: true;
 .active-menu {
   opacity: 1;
 }
+
+.logo {
+  &__image {
+    max-height: 65px;
+    padding: 5px 0;
+  }
+}
