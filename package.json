@@ -1,52 +1,54 @@
 {
-  "name": "tabak-house",
-  "version": "1.0.0",
+  "name": "gatsby-starter-react-bootstrap",
   "private": true,
-  "description": "Tabak.house website.",
-  "license": "MIT",
-  "homepage": "https://tabak.house",
-  "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack serve --mode development --open",
-    "deploy": "gsutil -m rsync -d -r ./dist gs://tabak-house",
-    "start": "npm run dev",
-    "lint-css": "stylelint ./src/scss",
-    "lint-js": "eslint ./src",
-    "lint": "npm-run-all lint-css lint-js"
-  },
+  "description": "A starter that includes and configures react-bootstrap and react-icons, along with SASS handling. ",
+  "version": "0.1.0",
+  "author": "Billy Jacoby <billyjacoby@gmail.com>",
   "dependencies": {
-    "bootstrap": "^4.6.0",
-    "bootstrap-icons": "^1.4.0",
-    "jquery": "^3.6.0",
-    "popper.js": "^1.16.1",
-    "stylelint-config-standard": "^21.0.0"
+    "bootstrap": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.3.34",
+    "gatsby-image": "^2.0.41",
+    "gatsby-plugin-manifest": "^2.0.29",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-source-contentful": "^4.0.0",
+    "gatsby-source-filesystem": "^2.0.33",
+    "gatsby-transformer-remark": "^3.2.0",
+    "gatsby-transformer-sharp": "^2.1.18",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.6.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/preset-env": "^7.13.12",
-    "autoprefixer": "^10.2.5",
-    "babel-loader": "^8.2.2",
-    "copy-webpack-plugin": "^8.1.0",
-    "css-loader": "^5.2.0",
-    "eslint": "^7.23.0",
-    "eslint-config-google": "^0.14.0",
-    "html-webpack-plugin": "^5.3.1",
-    "mini-css-extract-plugin": "^1.4.0",
-    "node-sass": "^5.0.0",
-    "nodemon": "^2.0.7",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.8",
-    "postcss-cli": "^8.3.1",
-    "prettier": "2.2.1",
-    "purgecss": "^4.0.2",
-    "sass": "^1.32.8",
-    "sass-loader": "^11.0.1",
-    "sirv-cli": "^1.0.11",
-    "style-loader": "^2.0.0",
-    "stylelint": "^13.12.0",
-    "stylelint-config-twbs-bootstrap": "^2.1.0",
-    "webpack": "^5.28.0",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
-  }
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.17.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -H 0.0.0.0 -p 8000",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "homepage": "https://billyjacoby.github.io/gatsby-react-bootstrap-starter/"
 }
