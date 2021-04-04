@@ -5,8 +5,17 @@
   "version": "0.1.0",
   "author": "Billy Jacoby <billyjacoby@gmail.com>",
   "dependencies": {
+    "babel-eslint": "^10.1.0",
     "bootstrap": "^4.3.1",
     "dotenv": "^8.2.0",
+    "eslint": "^7.23.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby": "^2.3.34",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-manifest": "^2.0.29",
@@ -24,7 +33,10 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "react-icons": "^3.6.1"
+    "react-icons": "^3.6.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-config-twbs-bootstrap": "^2.1.0"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
@@ -41,7 +53,10 @@
     "start": "npm run dev",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "lint-css": "stylelint ./src/styles",
+    "lint-js": "eslint ./src",
+    "lint": "yarn lint-css && yarn lint-js"
   },
   "repository": {
     "type": "git",
