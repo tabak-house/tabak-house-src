@@ -8,6 +8,8 @@
 // CSS without writing _new_ styles. For example, change you can either change
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
+
+
 //
 // Bring in Bootstrap
 //
@@ -16,15 +18,15 @@
 //
 // Import all of Bootstrap's CSS
 
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 // Option 2
 //
 // Import just the styles you need. Note that some stylesheets are required no matter what.
 //
-//@import "bootstrap/scss/functions"; // Required
-//@import "bootstrap/scss/variables"; // Required
-//@import "bootstrap/scss/mixins"; // Required
+//@import 'bootstrap/scss/functions'; // Required
+//@import 'bootstrap/scss/variables'; // Required
+//@import 'bootstrap/scss/mixins'; // Required
 
 //
 // Override Bootstrap here
@@ -73,6 +75,7 @@ $enable-shadows: true;
 //// @import "bootstrap/scss/spinners";
 //@import "bootstrap/scss/utilities";
 //// @import "bootstrap/scss/print";
+
 
 //
 // Custom styles
