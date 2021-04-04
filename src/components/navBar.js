@@ -23,20 +23,20 @@ const CustomNavbar = ({pageInfo}) => {
           <NavItem>
             <Nav.Link href="/">Главная</Nav.Link>
           </NavItem>
-          <NavItem>
-            <NavDropdown title="Каталог" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/">Табак</NavDropdown.Item>
-              <NavDropdown.Divider/>
-              <NavDropdown.Item href="/">Кальяны</NavDropdown.Item>
-              <NavDropdown.Item href="/">Колбы</NavDropdown.Item>
-              <NavDropdown.Item href="/">Чаши для кальяна</NavDropdown.Item>
-              <NavDropdown.Item href="/">Калауд и колпаки</NavDropdown.Item>
-              <NavDropdown.Divider/>
-              <NavDropdown.Item href="/">Уголь, кадило и щипцы</NavDropdown.Item>
-            </NavDropdown>
-          </NavItem>
-          <Nav.Link href="/">Доставка и оплата</Nav.Link>
-          <Nav.Link href="/">Контакты</Nav.Link>
+          {/*<NavItem>*/}
+          {/*  <NavDropdown title="Каталог" id="basic-nav-dropdown">*/}
+          {/*    <NavDropdown.Item href="/">Табак</NavDropdown.Item>*/}
+          {/*    <NavDropdown.Divider/>*/}
+          {/*    <NavDropdown.Item href="/">Кальяны</NavDropdown.Item>*/}
+          {/*    <NavDropdown.Item href="/">Колбы</NavDropdown.Item>*/}
+          {/*    <NavDropdown.Item href="/">Чаши для кальяна</NavDropdown.Item>*/}
+          {/*    <NavDropdown.Item href="/">Калауд и колпаки</NavDropdown.Item>*/}
+          {/*    <NavDropdown.Divider/>*/}
+          {/*    <NavDropdown.Item href="/">Уголь, кадило и щипцы</NavDropdown.Item>*/}
+          {/*  </NavDropdown>*/}
+          {/*</NavItem>*/}
+          <Nav.Link href="/delivery">Доставка и оплата</Nav.Link>
+          <Nav.Link href="/contact">Контакты</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

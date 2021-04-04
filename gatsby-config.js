@@ -3,11 +3,10 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: "/gatsby-react-bootstrap-starter",
   siteMetadata: {
-    title: `Gatsby React Bootstrap Starter`,
-    description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
-    author: `Billy Jacoby`,
+    title: `Tabak.House - Интернет магазин табаков и кальянов в ДНР`,
+    description: `Интернет магазин табаков и кальянов в ДНР.`,
+    author: `76-Distinct Team`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -47,4 +46,4 @@ module.exports = {
   ],
 }
 
-// console.log("======GATSBY======", JSON.stringify(module.exports))
+// console.log("========> GATSBY CONFIG========\n" + JSON.stringify(module.exports, null, 2) + "\n========< GATSBY CONFIG========");

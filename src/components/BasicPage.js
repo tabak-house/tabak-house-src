@@ -1,10 +1,12 @@
 import React from "react"
+import { graphql } from 'gatsby';
+
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const NotFoundPage = ({ data, location }) => {
-  const seoTitle = data.contentfulBasicPage?.slug
+const BasicPage = ({ data, location }) => {
+  const seoTitle = data.contentfulBasicPage?.pageTitle
   const markup = data.contentfulBasicPage?.markup?.childMarkdownRemark?.html
   return (
     <Layout>
@@ -14,13 +16,13 @@ const NotFoundPage = ({ data, location }) => {
   )
 }
 
-export default NotFoundPage
+export default BasicPage
 
-export const pageQuery = graphql`
-  query {
-    contentfulBasicPage(slug: {eq: "404"}) {
+export const query = graphql`
+  query BasicPageQuery($slug: String!) {
+    contentfulBasicPage(slug: {eq: $slug}) {
       id
-      slug
+      pageTitle
       markup {
         childMarkdownRemark {
           html
@@ -28,4 +30,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

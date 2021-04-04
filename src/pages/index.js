@@ -1,23 +1,32 @@
 import React from "react"
-import { Row, Col, Container, ListGroup } from "react-bootstrap"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {graphql} from "gatsby";
 
-const IndexPage = () => (
-  <Layout pageInfo={{ pageName: "index" }}>
-    <SEO title="Tabak House: Магазин табаков и кальянов в ДНР" keywords={[`tabak`, `табак`, `bootstrap`]} />
-    <Container id={"homepage-container"}>
-      <Row>
-        <Col>
-          <p className={"text-center"}>Не тряси зеленую яблоню – когда яблоко созреет, оно упадет само.</p>
-          <div className="image text-center">
-            <img src="https://bukvaeshka.by/upload/iblock/a37/f8ace107296ec06ccc2129d6acc3c791[1].png" alt="Кряк" draggable="false" />
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  </Layout>
-)
+const IndexPage = ({ data, location }) => {
+  const seoTitle = data.contentfulBasicPage?.pageTitle
+  const markup = data.contentfulBasicPage?.markup?.childMarkdownRemark?.html
+  return (
+    <Layout>
+      <SEO title={seoTitle}/>
+      <div dangerouslySetInnerHTML={{__html: markup}}/>
+    </Layout>
+  )
+}
 
 export default IndexPage
+
+export const query = graphql`
+  query IndexPageQuery {
+    contentfulBasicPage(slug: {eq: "home"}) {
+      id
+      slug
+      pageTitle
+      markup {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+  }
+`;
