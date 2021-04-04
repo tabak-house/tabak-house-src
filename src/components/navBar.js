@@ -6,25 +6,30 @@ import {
   Nav,
   NavDropdown,
   Image,
-  NavItem, Container, Row, Col,
+  NavItem,
+  Container,
+  Row,
+  Col,
 } from "react-bootstrap"
 
-const CustomNavbar = ({pageInfo}) => {
-
+const CustomNavbar = ({ pageInfo }) => {
   return (
     <Container>
       <Row>
         <Col>
           <Navbar expand={"lg"} variant={"light"}>
             <Navbar.Brand href="/">
-              <Image src={logo} height={55} alt={'Логотип'}/>
+              <Image src={logo} height={55} alt={"Логотип"} />
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-            <Navbar.Collapse id="basic-navbar-nav" >
-              <Nav className={'ml-auto'}>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className={"ml-auto"}>
                 <NavItem>
                   <Nav.Link href="/">Главная</Nav.Link>
+                </NavItem>
+                <NavItem>
+                  <Nav.Link href="/catalog">Каталог</Nav.Link>
                 </NavItem>
                 {/*<NavItem>*/}
                 {/*  <NavDropdown title="Каталог" id="basic-nav-dropdown">*/}

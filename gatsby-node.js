@@ -28,6 +28,17 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
+            ... on ContentfulProduct {
+              id
+              slug
+              sys {
+                contentType {
+                  sys {
+                    id
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -38,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     result.data.allContentfulEntry.edges.forEach(edge => {
-      switch (edge.node.sys.contentType.sys.id) {
+      switch (edge.node?.sys?.contentType?.sys?.id) {
         case "basicPage":
           // Do not create page for homepage.
           if(edge.node.slug === 'home') {
@@ -50,10 +61,24 @@ exports.createPages = ({ graphql, actions }) => {
             path: `${edge.node.slug}`,
             component: path.resolve('./src/components/BasicPage.js'),
             context: {
+              id: edge.node.id,
               slug: edge.node.slug,
             },
           })
           break;
+
+        case "product": {
+          createPage({
+            // Path for this page — required
+            path: `/products/${edge.node.slug}`,
+            component: path.resolve('./src/components/ProductPage.js'),
+            context: {
+              id: edge.node.id,
+              slug: edge.node.slug,
+            },
+          })
+          break;
+        }
       }
     })
   })

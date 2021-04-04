@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby';
-
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,7 +10,7 @@ const BasicPage = ({ data, location }) => {
   return (
     <Layout>
       <SEO title={seoTitle} />
-      <div dangerouslySetInnerHTML={{__html: markup}} />
+      <div dangerouslySetInnerHTML={{ __html: markup }} />
     </Layout>
   )
 }
@@ -19,8 +18,8 @@ const BasicPage = ({ data, location }) => {
 export default BasicPage
 
 export const query = graphql`
-  query BasicPageQuery($slug: String!) {
-    contentfulBasicPage(slug: {eq: $slug}) {
+  query BasicPageQuery($id: String!) {
+    contentfulBasicPage(id: { eq: $id }) {
       id
       pageTitle
       markup {
@@ -30,4 +29,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
