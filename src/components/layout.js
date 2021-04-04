@@ -5,15 +5,15 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react';
+import {StaticQuery, graphql} from 'gatsby';
 
-import { Container, Row, Col } from "react-bootstrap"
+import {Container, Row, Col} from 'react-bootstrap';
 
-import Navbar from "./navBar"
-import Footer from "./footer"
+import Navbar from './navBar';
+import Footer from './footer';
 
-const Layout = ({ children, pageInfo }) => (
+const Layout = ({children, pageInfo}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,7 +24,7 @@ const Layout = ({ children, pageInfo }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Navbar pageInfo={pageInfo} />
         <Container fluid>
@@ -40,6 +40,6 @@ const Layout = ({ children, pageInfo }) => (
       </>
     )}
   />
-)
+);
 
-export default Layout
+export default Layout;

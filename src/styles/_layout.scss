@@ -8,6 +8,7 @@ div.full-height {
 }
 
 a.link-no-style {
+
   &:hover {
     text-decoration: none;
   }
@@ -18,6 +19,7 @@ a.link-no-style {
   flex-direction: column;
   align-content: center;
   align-items: center;
+
   footer {
     display: flex;
     position: relative;

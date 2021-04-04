@@ -1,20 +1,19 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { graphql } from "gatsby"
-import { Col, Row } from "react-bootstrap"
-import ProductCard from "../components/ProductCard"
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import {graphql} from 'gatsby';
+import {Col, Row} from 'react-bootstrap';
+import ProductCard from '../components/ProductCard';
 
-const Catalog = ({ data, location }) => {
-  console.log(data)
-  const products = data.allContentfulProduct.edges
+const Catalog = ({data, location}) => {
+  const products = data.allContentfulProduct.edges;
 
   return (
     <Layout>
-      <SEO title={"Каталог"} />
+      <SEO title={'Каталог'} />
       <h1>Каталог товаров</h1>
       <Row>
-        {products.map(product => {
+        {products.map((product) => {
           return (
             <Col xs={12} sm={6} md={4} lg={3}>
               <ProductCard
@@ -24,14 +23,14 @@ const Catalog = ({ data, location }) => {
                 imageUrl={product.node.images[0].fluid.src}
               />
             </Col>
-          )
+          );
         })}
       </Row>
     </Layout>
-  )
-}
+  );
+};
 
-export default Catalog
+export default Catalog;
 
 export const query = graphql`
   query CatalogQuery {
@@ -57,4 +56,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

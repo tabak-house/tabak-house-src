@@ -5,14 +5,31 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import {useStaticQuery, graphql} from 'gatsby';
 
-function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
-    graphql`
+/**
+ * SEO component.
+ *
+ * @param {String} description
+ *   Description.
+ * @param {String} lang
+ *   Language.
+ * @param {Object} meta
+ *   Meta.
+ * @param {String} keywords
+ *   Keywords.
+ * @param {String} title
+ *   Title.
+ *
+ * @return {JSX.Element}
+ * @constructor
+ */
+function SEO({description, lang, meta, keywords, title}) {
+  const {site} = useStaticQuery(
+      graphql`
       query {
         site {
           siteMetadata {
@@ -22,10 +39,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -68,17 +85,17 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: metaDescription,
         },
       ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
+          .concat(
+          keywords.length > 0 ?
+            {
+              name: `keywords`,
+              content: keywords.join(`, `),
+            } :
+            [],
+          )
+          .concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
@@ -86,7 +103,7 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
@@ -94,6 +111,6 @@ SEO.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;
