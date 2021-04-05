@@ -18,7 +18,12 @@ const CustomNavbar = ({pageInfo}) => {
         <Col>
           <Navbar expand={'lg'} variant={'light'}>
             <Navbar.Brand href="/">
-              <Image src={logo} height={55} alt={'Логотип'} />
+              <Image
+                className={'navbar-brand-logo'}
+                src={logo}
+                height={55}
+                alt={'Логотип'}
+              />
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -8,8 +8,13 @@ const Footer = () => {
     <Container>
       <footer className={'py-5 text-center'}>
         <p>
-          <Link to={'/'}>
-            <Image src={logo} height={55} alt={'Логотип'} />
+          <Link className={'footer-brand-link'} to={'/'} >
+            <Image
+              className={'footer-brand-logo'}
+              src={logo}
+              height={55}
+              alt={'Логотип'}
+            />
           </Link>
         </p>
         <p>

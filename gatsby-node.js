@@ -4,14 +4,14 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require(`path`)
+const path = require(`path`);
 
-exports.onPostBuild = ({ reporter }) => {
-  reporter.info(`Your Gatsby site has been built!`)
-}
+exports.onPostBuild = ({reporter}) => {
+  reporter.info(`Your Gatsby site has been built!`);
+};
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = ({graphql, actions}) => {
+  const {createPage} = actions;
   return graphql(`
     query loadPagesQuery {
       allContentfulEntry {
@@ -39,20 +39,31 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
+            ... on ContentfulLandingPage {
+              id
+              slug
+              sys {
+                contentType {
+                  sys {
+                    id
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
 
-    result.data.allContentfulEntry.edges.forEach(edge => {
+    result.data.allContentfulEntry.edges.forEach((edge) => {
       switch (edge.node?.sys?.contentType?.sys?.id) {
-        case "basicPage":
+        case 'basicPage':
           // Do not create page for homepage.
-          if(edge.node.slug === 'home') {
+          if (edge.node.slug === 'home') {
             break;
           }
 
@@ -64,10 +75,10 @@ exports.createPages = ({ graphql, actions }) => {
               id: edge.node.id,
               slug: edge.node.slug,
             },
-          })
+          });
           break;
 
-        case "product": {
+        case 'product': {
           createPage({
             // Path for this page — required
             path: `/products/${edge.node.slug}`,
@@ -76,10 +87,25 @@ exports.createPages = ({ graphql, actions }) => {
               id: edge.node.id,
               slug: edge.node.slug,
             },
-          })
+          });
           break;
         }
+        case 'landingPage': {
+          createPage({
+            // Path for this page — required
+            path: `/${edge.node.slug}`,
+            component: path.resolve('./src/components/LandingPage.js'),
+            context: {
+              id: edge.node.id,
+              slug: edge.node.slug,
+            },
+          });
+          break;
+        }
+
+        default:
+          break;
       }
-    })
-  })
-}
+    });
+  });
+};

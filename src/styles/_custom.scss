@@ -1,0 +1,8 @@
+img {
+  @include img-fluid();
+}
+
+.navbar-brand-logo,
+.footer-brand-logo {
+  max-height: 55px;
+}
