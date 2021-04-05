@@ -1,30 +1,35 @@
-import React from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
 import {graphql} from 'gatsby';
+import LandingPage from '../components/LandingPage';
 
-const IndexPage = ({data, location}) => {
-  const seoTitle = data.contentfulBasicPage?.pageTitle;
-  const markup = data.contentfulBasicPage?.markup?.childMarkdownRemark?.html;
-  return (
-    <Layout>
-      <SEO title={seoTitle} />
-      <div dangerouslySetInnerHTML={{__html: markup}} />
-    </Layout>
-  );
-};
-
-export default IndexPage;
+/**
+ * Index page component.
+ */
+export default class Index extends LandingPage {};
 
 export const query = graphql`
-  query IndexPageQuery {
-    contentfulBasicPage(slug: { eq: "home" }) {
+  query HomePageQuery {
+    contentfulLandingPage(slug: {eq: "home"}) {
       id
-      slug
       pageTitle
-      markup {
-        childMarkdownRemark {
-          html
+      content {
+        lg
+        md
+        sm
+        xl
+        xs
+        content {
+          markup {
+            childMarkdownRemark {
+              html
+            }
+          }
+          sys {
+            contentType {
+              sys {
+                id
+              }
+            }
+          }
         }
       }
     }

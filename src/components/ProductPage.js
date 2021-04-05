@@ -13,6 +13,7 @@ const ProductPage = ({data, location}) => {
     images,
     description,
   } = data.contentfulProduct;
+
   return (
     <Layout>
       <SEO title={title} />
@@ -20,7 +21,7 @@ const ProductPage = ({data, location}) => {
         <Col xs={12} sm={4}>
           {(images.length === 1 &&
             images.map((image) => (
-              <img
+              <img key={image.file.url}
                 src={image.file.url}
                 width={'100%'}
                 alt={image.file.fileName}
@@ -28,7 +29,7 @@ const ProductPage = ({data, location}) => {
             ))) || (
             <Carousel controls={true} interval={2000}>
               {images.map((image) => (
-                <Carousel.Item>
+                <Carousel.Item key={image.file.url}>
                   <img
                     src={image.file.url}
                     width={'100%'}

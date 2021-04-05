@@ -15,8 +15,9 @@ const Catalog = ({data, location}) => {
       <Row>
         {products.map((product) => {
           return (
-            <Col xs={12} sm={6} md={4} lg={3}>
+            <Col xs={12} sm={6} md={4} lg={3} key={product.node.id}>
               <ProductCard
+                contentfulId={product.node.id}
                 title={product.node.productTitle}
                 price={product.node.price}
                 url={`/products/${product.node.slug}`}

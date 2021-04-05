@@ -60,13 +60,13 @@ exports.createPages = ({graphql, actions}) => {
     }
 
     result.data.allContentfulEntry.edges.forEach((edge) => {
+      // Do not create page for homepage.
+      if (edge.node.slug === 'home') {
+        return;
+      }
+
       switch (edge.node?.sys?.contentType?.sys?.id) {
         case 'basicPage':
-          // Do not create page for homepage.
-          if (edge.node.slug === 'home') {
-            break;
-          }
-
           createPage({
             // Path for this page — required
             path: `${edge.node.slug}`,
