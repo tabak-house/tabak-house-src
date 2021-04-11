@@ -3,35 +3,48 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="img/main/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="img/main/favicon.ico" type="image/x-icon" />
     <title>"Tabak House" - Мир кальянов ДНР</title>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <div
-          class="header d-flex justify-content-between border-bottom border-dark mb py-2 position-relative"
+        <nav
+          class="navbar navbar-expand-lg navbar-light border-bottom border-dark mb"
         >
-          <a href="index.html">
-            <img src="img/main/logo.png" alt="Tabak.House" />
+          <a class="navbar-brand" href="index.html">
+            <img src="img/main/logo.svg" alt="Tabak-House" />
           </a>
-          <button type="button" class="mobheader__btn">
-            <span class="mobheader__span"></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <nav class="menu">
-            <ul class="navlinks mb-0">
-              <li>
-                <a class="navlinks__active" href="index.html">Главная</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-5 text-uppercase">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html"
+                  >Главная<span class="sr-only">(current)</span></a
+                >
               </li>
-              <li>
-                <a class="navlinks__item" href="#category">Категории</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#category">Каталог</a>
               </li>
-              <li>
-                <a class="navlinks__item" href="#delivery">Контакты</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#advice">Советы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#delivery">Доставка</a>
               </li>
             </ul>
-            <ul class="navmedia mb-0 pl-3">
-              <li>
+            <ul class="navbar-nav nav-media align-items-center">
+              <li class="nav-item">
                 <a href="https://vk.com/tabak_house_dn">
                   <img
                     src="img/media/vk.svg"
@@ -41,7 +54,7 @@
                   />
                 </a>
               </li>
-              <li>
+              <li class="nav-item">
                 <a href="https://t.me/tabak_house">
                   <img
                     src="img/media/telegram.svg"
@@ -51,9 +64,14 @@
                   />
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="tel-link" href="tel:+380713837929"
+                  >+38(071)-383-79-29</a
+                >
+              </li>
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </header>
       <main>
         <div
@@ -61,57 +79,96 @@
           class="carousel slide carousel-fade mb"
           data-ride="carousel"
         >
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <figure class="carousel-img">
-                <img src="img/slider/slide1.jpg" alt="img13" />
-                <figcaption>
-                  <h2>Мировые бренды</h2>
-                  <p>
-                    Для своих гостей мы предоставляем только оригинальную
-                    продукцию.
-                  </p>
-                </figcaption>
-              </figure>
+              <img
+                class="d-block w-100"
+                src="https://i.ibb.co/R9wNvc0/slide1.png"
+                alt="Табак для кальяна"
+              />
+              <div class="carousel-caption d-none d-md-block bg-black-50">
+                <h2 class="animated fadeInRight">Мировые бренды</h2>
+                <p class="animated fadeInRight">
+                  Для своих гостей мы предоставляем только оригинальную
+                  продукцию.
+                </p>
+              </div>
             </div>
             <div class="carousel-item">
-              <figure class="carousel-img">
-                <img src="img/slider/slide5.jpg" alt="img13" />
-                <figcaption>
-                  <h2>Знак качества</h2>
-                  <p>
-                    Высокое качество - это наша цель. Поэтому у нас вы найдете
-                    только надежный и качественный продукт.
-                  </p>
-                </figcaption>
-              </figure>
+              <img
+                class="d-block w-100"
+                src="https://i.ibb.co/Bz82Ysc/slide2.png"
+                alt="Кальян в темном стиле"
+              />
+              <div class="carousel-caption d-none d-md-block bg-black-50">
+                <h2 class="animated fadeInRight">Знак качества</h2>
+                <p class="animated fadeInRight">
+                  Высокое качество - это наша цель. Поэтому у нас вы найдете
+                  только надежный и качественный продукт.
+                </p>
+              </div>
             </div>
             <div class="carousel-item">
-              <figure class="carousel-img">
-                <img src="img/slider/slide6.jpg" alt="img13" />
-                <figcaption>
-                  <h2>Большой ассортимент</h2>
-                  <p>
-                    Наш ассортимент - это наша гордость. Любой найдет то, что
-                    именно ему нужно.
-                  </p>
-                </figcaption>
-              </figure>
+              <img
+                class="d-block w-100"
+                src="https://i.ibb.co/xMTYcQr/slide3.png"
+                alt="Уголь и табак"
+              />
+              <div
+                class="carousel-caption d-none d-md-block bg-black bg-black-50"
+              >
+                <h2 class="animated fadeInRight">Большой ассортимент</h2>
+                <p class="animated fadeInRight">
+                  Наш ассортимент - это наша гордость. Любой найдет то, что
+                  именно ему нужно.
+                </p>
+              </div>
             </div>
             <div class="carousel-item">
-              <figure class="carousel-img">
-                <img src="img/slider/slide2.jpg" alt="img13" />
-                <figcaption>
-                  <h2>Горячие цены</h2>
-                  <p>Одни из самых лояльных цен по всей республике.</p>
-                </figcaption>
-              </figure>
+              <img
+                class="d-block w-100"
+                src="https://i.ibb.co/8BKVZWR/slide4.png"
+                alt="Горящий кальян"
+              />
+              <div class="carousel-caption d-none d-md-block bg-black-50">
+                <h2 class="animated fadeInRight">Горячие цены</h2>
+                <p class="animated fadeInRight">
+                  Одни из самых лояльных цен по всей республике.
+                </p>
+              </div>
             </div>
           </div>
+          <a
+            class="carousel-control-prev"
+            href="#myCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon text-dark"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Предыдущий</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#myCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Следующий</span>
+          </a>
         </div>
-        <div id="category" class="text-center border-top border-dark">
-          <h2 class="py-2 m-0">Категории</h2>
-          <section class="mb mx-0 row border-top border-dark pt-3">
+        <div id="category" class="text-center border-top border-dark mb">
+          <h2 class="py-3 m-0">Каталог</h2>
+          <section class="mx-0 row border-top border-dark pt-5">
             <a class="category category-aqua col" href="#">
               <span class="category__title">Кальяны</span>
               <img src="img/categories/1.svg" alt="Кальяны" />
@@ -134,32 +191,80 @@
             </a>
           </section>
         </div>
-
-        <div class="row mb px-0 m-0 py-3">
-          <div class="col-12 col-md-6 border-top border-dark mb-3">
-            <h3>Как правильно забить табак?</h3>
-            <p>
-              Табачную смесь нужно распушить руками и свободно уложить в чашу,
-              оставляя между листьями воздушную прослойку. С помощью шила
-              выровняйте уровень смеси с учётом отступа от верхнего края до
-              фольги. Больше отступ – меньше крепость, запомните это.
-            </p>
+        <div id="advice" class="text-center border-top border-dark mb">
+          <h2 class="py-3 m-0">Советы от «Tabak-House»</h2>
+        <div class="row mb px-0 m-0 py-3 border-top border-dark pt-5">
+          <div class="card col-12 col-md-6 mb-3">
+            <img
+              src="https://i.ibb.co/dK0Mqgm/post2.png"
+              class="card-img-top"
+              alt="Чаша с углем"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Почему горчит кальян?</h3>
+              <p class="card-text">
+                Чаще всего, в эти ситуации попадают новички, которые
+                невнимательно отнеслись к забивке кальяна Важно помнить о том,
+                что в классической забивке нужно оставлять промежуток между
+                фольгой или калаудом и табаком в чаше.
+              </p>
+              <a href="#" class="btn btn-outline-dark">Читать далее</a>
+            </div>
           </div>
-          <div class="col-12 col-md-6 mb-3">
-            <img src="/img/posts/post2.jpg" width="100%"/>
+          <div class="card col-12 col-md-6 mb-3">
+            <img
+              src="https://i.ibb.co/rpTnPTf/post1.png"
+              class="card-img-top"
+              alt="Чаша с углем"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Как правильно забить табак?</h3>
+              <p class="card-text">
+                абачную смесь нужно распушить руками и свободно уложить в чашу,
+                оставляя между листьями воздушную прослойку. С помощью шила
+                выровняйте уровень смеси с учётом отступа от верхнего края до
+                фольги. Больше отступ – меньше крепость, запомните это.
+              </p>
+              <a href="#" class="btn btn-outline-dark">Читать далее</a>
+            </div>
           </div>
-          <div class="col-12 col-md-6 border-top border-dark">
-            <h3>Почему горчит кальян?</h3>
-            <p>
-              Чаще всего, в эти ситуации попадают новички, которые невнимательно
-              отнеслись к забивке кальяна Важно помнить о том, что в
-              классической забивке нужно оставлять промежуток между фольгой или
-              калаудом и табаком в чаше.
-            </p>
+          <div class="card col-12 col-md-6 mb-3">
+            <img
+              src="https://i.ibb.co/JyDb8Lj/post3.png"
+              class="card-img-top"
+              alt="Кальян с фруктами"
+            />
+            <div class="card-body">
+              <h3 class="card-title">
+                Что можно добавить в колбу для кальяна?
+              </h3>
+              <p class="card-text">
+                Легко проверить влияние содержимого колбы на вкусовую передачу:
+                установите шахту и вдохните через шланг воздух. Вы почувствуете
+                аромат, который дополнит вкус табака. Главное правило: знать
+                меру!
+              </p>
+              <a href="#" class="btn btn-outline-dark">Читать далее</a>
+            </div>
           </div>
-          <div class="col-12 col-md-6">
-            <img src="/img/posts/post1.jpg" width="100%"/>
+          <div class="card col-12 col-md-6 mb-3">
+            <img
+              src="https://i.ibb.co/WgV4X2N/post4.png"
+              class="card-img-top"
+              alt="Девушка и кальян"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Как правильно раскурить кальян?</h3>
+              <p class="card-text">
+                Разогреть емкость с табаком на раскаленных углях в емкости.
+                Через считанные минуты состав будет готов. Затяжки должны быть
+                плавными, неглубокими. Как только смесь будет хорошо прогрета,
+                хватит 5 вдыханий.
+              </p>
+              <a href="#" class="btn btn-outline-dark">Читать далее</a>
+            </div>
           </div>
+        </div>
         </div>
         <div id="delivery" class="border-top border-dark">
           <h2 class="py-2 m-0 text-center">Оплата и доставка</h2>
@@ -186,45 +291,38 @@
               </p>
             </div>
             <div class="col-12 col-md-6">
-              <img src="/img/delivery/image1.png" width="100%" />
+              <img
+                src="https://i.ibb.co/5rC6r0h/delivery.png"
+                width="100%"
+                draggable="false"
+              />
             </div>
           </div>
         </div>
       </main>
-<footer class="border-top border-dark d-flex contact-block pb-2">
-
-    <div>
-      <a href="index.html"><img src="/img/main/logo-small.svg" alt="tabak-house"></a>
-    </div>
-    <div>
-      <ul>
-        <li>Феникс: <a href="tel:+380713837929">+38(071)-383-79-29</a></li>
-        <li>Telegram: <a href="https://t.me/tabak_house">@tabak_house</a></li>
-      </ul>
-    </div>
-
-</footer>
-
-     <!-- <h1>h1.Заголовок текста.</h1>
-      <h2>h2.Заголовок текста.</h2>
-      <h3>h3.Заголовок текста.</h3>
-      <h4>h4.Заголовок текста.</h4>
-      <h5>h5.Заголовок текста.</h5>
-      <span class="line"></span>
-      <p>p. Съешь еще этих мягких французких булок, да выпей чаю.</p>
-      <span class="line"></span>
-      <a href="#">Сслыка</a>
-      <span class="line"></span>
-      <button>Кнопка</button>
-      <span class="line"></span>
-
-      <figure class="carousel-img">
-        <img src="img/slider/slide4.jpg" alt="img13" />
-        <figcaption>
-          <h2>Лучший табак в ДНР</h2>
-          <p>Только у нас только настоящий оригинальный табак.</p>
-        </figcaption>
-      </figure>-->
+      <footer class="border-top border-dark d-flex contact-block pb-2">
+        <div>
+          <a href="index.html"
+            ><img src="/img/main/logo-small.svg" alt="tabak-house"
+          /></a>
+        </div>
+        <div>
+          <ul>
+            <li>
+              Феникс:
+              <a class="tel-link" href="tel:+380713837929"
+                >+38(071)-383-79-29</a
+              >
+            </li>
+            <li>
+              Telegram:
+              <a class="tel-link" href="https://t.me/tabak_house"
+                >@tabak_house</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
