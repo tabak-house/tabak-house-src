@@ -1,0 +1,57 @@
+////////////typography////////////////
+$spacer: 40px;
+
+$black: #000;
+$white: #fff;
+$aqua: #78d6e3;
+$green: #a8db57;
+$yellow: #d2cc66;
+$orange: #f6af65;
+$red: #e38a88;
+$gray: #4b4a4a;
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Oswald", sans-serif;
+}
+
+.tel-link {
+  color: $gray;
+  font-weight: 700;
+
+  &:hover {
+    color: $black;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 12px;
+  }
+}
+
+////////body wrapper and margin-blocks////////
+
+.wrapper {
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: $white;
+
+  @include media-breakpoint-down(md) {
+    padding: 0 20px;
+  }
+}
+
+.mb {
+  margin-bottom: 40px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 20px;
+  }
+}

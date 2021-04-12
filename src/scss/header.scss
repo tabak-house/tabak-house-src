@@ -1,0 +1,35 @@
+
+.nav-link {
+  font-weight: 700;
+  color: $black;
+
+  &:focus {
+    color: $white !important;
+    outline: 0;
+    box-shadow: inset 100px 0 0 0 $black;
+    opacity: 1;
+  }
+
+  &:hover {
+    padding: 4px 0;
+    border-top: 4px solid $black;
+    border-bottom: 4px solid $black;
+    opacity: 1;
+  }
+}
+
+.nav-media {
+  flex-direction: row;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 10px;
+  }
+
+  li {
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
