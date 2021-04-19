@@ -1,7 +1,7 @@
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-family-base;
   color: $black;
-  font-size: 14px;
+  font-size: $font-size-base;
 }
 
 h1,
@@ -9,7 +9,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Oswald", sans-serif;
+  font-family: $headings-font-family;
 }
 
 a {
@@ -17,7 +17,7 @@ a {
 
   &:hover {
     color: $black;
-    font-weight: 700;
+    font-weight: $font-weight-link;
     text-decoration: none;
   }
 }
@@ -25,15 +25,15 @@ a {
 .btn {
   color: $black;
   background-color: transparent;
-  border: 2px solid $black;
+  border: $border-button;
   transition: all ease .3s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: inset 150px 0 0 0 $black;
     color: $white;
   }
 }
-
 ////////body wrapper and indents////////
 
 .wrapper {

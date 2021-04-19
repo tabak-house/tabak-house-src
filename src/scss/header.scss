@@ -2,26 +2,22 @@
 
   &:focus {
     color: $white;
-    outline: 0;
     box-shadow: inset 100px 0 0 0 $black;
-    opacity: 1;
   }
 }
 
-.navbar-light .navbar-toggler{
-
+.navbar-light .navbar-toggler {
   border: none;
 }
 
 .nav-link {
-  font-weight: 700;
+  font-weight: $font-weight-link;
   color: $black;
 
   &:hover {
-    padding: 4px 0;
-    border-top: 4px solid $black;
-    border-bottom: 4px solid $black;
-    opacity: 1;
+    padding: 6px 0;
+    border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
   }
 }
 
