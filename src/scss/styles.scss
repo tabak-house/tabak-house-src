@@ -83,7 +83,9 @@ $enable-shadows: true;
 // Custom styles
 //
 
+@import "variables.scss";
 @import "typography.scss";
+@import "animation.scss";
 @import "header.scss";
-@import "content.scss";
+@import "category.scss";
 @import "footer.scss";

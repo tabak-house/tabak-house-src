@@ -1,17 +1,7 @@
-////////////typography////////////////
-$spacer: 40px;
-
-$black: #000;
-$white: #fff;
-$aqua: #78d6e3;
-$green: #a8db57;
-$yellow: #d2cc66;
-$orange: #f6af65;
-$red: #e38a88;
-$gray: #4b4a4a;
-
-p {
+body {
   font-family: "Montserrat", sans-serif;
+  color: $black;
+  font-size: 14px;
 }
 
 h1,
@@ -22,20 +12,29 @@ h5 {
   font-family: "Oswald", sans-serif;
 }
 
-.tel-link {
-  color: $gray;
-  font-weight: 700;
+a {
+  color: $black;
 
   &:hover {
     color: $black;
-  }
-
-  @include media-breakpoint-down(xs) {
-    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
   }
 }
 
-////////body wrapper and margin-blocks////////
+.btn {
+  color: $black;
+  background-color: transparent;
+  border: 2px solid $black;
+  transition: all ease .3s;
+
+  &:hover {
+    box-shadow: inset 150px 0 0 0 $black;
+    color: $white;
+  }
+}
+
+////////body wrapper and indents////////
 
 .wrapper {
   padding: 0 40px;
@@ -44,7 +43,7 @@ h5 {
   background-color: $white;
 
   @include media-breakpoint-down(md) {
-    padding: 0 20px;
+    padding: 0 3%;
   }
 }
 
@@ -53,5 +52,29 @@ h5 {
 
   @include media-breakpoint-down(md) {
     margin-bottom: 20px;
+  }
+}
+
+.pb-block {
+  padding-bottom: 20px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 10px;
+  }
+}
+
+.py-block {
+  padding: 20px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 10px 0;
+  }
+}
+
+.pt-block {
+  padding-top: 20px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 10px;
   }
 }

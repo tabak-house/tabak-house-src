@@ -1,0 +1,16 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    width: 200px;
+    border-radius: 50%;
+    transition: 1s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
