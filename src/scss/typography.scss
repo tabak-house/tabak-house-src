@@ -27,11 +27,13 @@ a {
   background-color: transparent;
   border: $border-button;
   transition: all ease .3s;
+  font-weight: 400;
 
   &:hover,
   &:focus {
     box-shadow: inset 150px 0 0 0 $black;
     color: $white;
+    border-radius: 0;
   }
 }
 ////////body wrapper and indents////////
