@@ -1,0 +1,17 @@
+//////////////Carousel text-block animation////////////////////////////
+
+.fadeIn {
+  animation: fadeIn ease 1s;
+  background-color: rgba($black, .5);
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

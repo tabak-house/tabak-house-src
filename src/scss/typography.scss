@@ -1,0 +1,98 @@
+body {
+  font-family: $font-family-base;
+  color: $black;
+  font-size: $font-size-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $headings-font-family;
+}
+
+a {
+  color: $black;
+
+  &:hover {
+    color: $black;
+    font-weight: $font-weight-link;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  color: $black;
+  background-color: transparent;
+  border: $border-button;
+  border-radius: 0;
+  transition: all ease .3s;
+
+  &:hover {
+    box-shadow: inset 150px 0 0 0 $black;
+    font-weight: $font-weight-btn;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: inset 150px 0 0 0 $yellow;
+    font-weight: $font-weight-btn;
+  }
+}
+////////body wrapper and indents////////
+
+.wrapper {
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: $white;
+
+  @include media-breakpoint-down(md) {
+    padding: 0 3%;
+  }
+}
+
+.mb {
+  margin-bottom: 40px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 20px;
+  }
+}
+
+.pb-block {
+  padding-bottom: 20px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 10px;
+  }
+}
+
+.py-block {
+  padding: 20px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 10px 0;
+  }
+}
+
+.pt-block {
+  padding-top: 20px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 10px;
+  }
+}
+
+.pr-lg {
+  @include media-breakpoint-up(lg) {
+    padding-right: 70px;
+  }
+}
+
+.pl-lg {
+  @include media-breakpoint-up(lg) {
+    padding-left: 70px;
+  }
+}

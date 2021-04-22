@@ -1,0 +1,17 @@
+.contact-block {
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+    }
+  }
+
+  li {
+    list-style-type: none;
+  }
+}

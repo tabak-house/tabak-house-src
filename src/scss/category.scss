@@ -1,0 +1,23 @@
+.category {
+  display: flex;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+    @include media-breakpoint-down(xs) {
+      width: 120px;
+    }
+  }
+
+  img {
+    width: inherit;
+    border-radius: 50%;
+    transition: 1s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
