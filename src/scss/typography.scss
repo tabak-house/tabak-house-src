@@ -29,7 +29,12 @@ a {
   border-radius: 0;
   transition: all ease .3s;
 
-  &:hover,
+  &:hover {
+    box-shadow: inset 150px 0 0 0 $black;
+    font-weight: $font-weight-btn;
+    color: $white;
+  }
+
   &:focus {
     box-shadow: inset 150px 0 0 0 $yellow;
     font-weight: $font-weight-btn;
