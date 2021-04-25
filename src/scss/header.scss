@@ -9,6 +9,13 @@
   }
 }
 
+.navbar-brand {
+
+  .logo {
+    max-height: 50px;
+  }
+}
+
 .nav-link {
   font-weight: $font-weight-link;
   color: $black;
